@@ -1,0 +1,12 @@
+C:\Users\PC\AppData\Local\Temporary Projects\DecompiledScriptsFinder\bin\Debug\DecompiledScriptsFinder.exe.config
+C:\Users\PC\Documents\Visual Studio 2015\Projects\DecompiledScriptsFinder\DecompiledScriptsFinder\bin\Debug\DecompiledScriptsFinder.exe.config
+C:\Users\PC\Documents\Visual Studio 2015\Projects\DecompiledScriptsFinder\DecompiledScriptsFinder\obj\Debug\DecompiledScriptsFinder.vbprojResolveAssemblyReference.cache
+C:\Users\PC\Documents\Visual Studio 2015\Projects\DecompiledScriptsFinder\DecompiledScriptsFinder\obj\Debug\DecompiledScriptsFinder.frmMain.resources
+C:\Users\PC\Documents\Visual Studio 2015\Projects\DecompiledScriptsFinder\DecompiledScriptsFinder\obj\Debug\DecompiledScriptsFinder.Resources.resources
+C:\Users\PC\Documents\Visual Studio 2015\Projects\DecompiledScriptsFinder\DecompiledScriptsFinder\obj\Debug\DecompiledScriptsFinder.vbproj.GenerateResource.Cache
+C:\Users\PC\Documents\Visual Studio 2015\Projects\DecompiledScriptsFinder\DecompiledScriptsFinder\obj\Debug\DecompiledScriptsFinder.xml
+C:\Users\PC\Documents\Visual Studio 2015\Projects\DecompiledScriptsFinder\DecompiledScriptsFinder\bin\Debug\DecompiledScriptsFinder.exe
+C:\Users\PC\Documents\Visual Studio 2015\Projects\DecompiledScriptsFinder\DecompiledScriptsFinder\bin\Debug\DecompiledScriptsFinder.pdb
+C:\Users\PC\Documents\Visual Studio 2015\Projects\DecompiledScriptsFinder\DecompiledScriptsFinder\bin\Debug\DecompiledScriptsFinder.xml
+C:\Users\PC\Documents\Visual Studio 2015\Projects\DecompiledScriptsFinder\DecompiledScriptsFinder\obj\Debug\DecompiledScriptsFinder.exe
+C:\Users\PC\Documents\Visual Studio 2015\Projects\DecompiledScriptsFinder\DecompiledScriptsFinder\obj\Debug\DecompiledScriptsFinder.pdb
