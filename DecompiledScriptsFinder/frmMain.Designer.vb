@@ -36,7 +36,7 @@ Partial Class frmMain
         Me.pbProgress = New System.Windows.Forms.ToolStripProgressBar()
         Me.lblStatus = New System.Windows.Forms.ToolStripStatusLabel()
         Me.SplitContainer1 = New System.Windows.Forms.SplitContainer()
-        Me.pbLine = New System.Windows.Forms.ToolStripProgressBar()
+        Me.cbQuick = New System.Windows.Forms.CheckBox()
         Me.rtbText = New DecompiledScriptsFinder.RichTextBoxEx()
         Me.StatusStrip1.SuspendLayout()
         CType(Me.SplitContainer1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -57,7 +57,7 @@ Partial Class frmMain
         Me.txtStr.Location = New System.Drawing.Point(87, 32)
         Me.txtStr.Name = "txtStr"
         Me.txtStr.Size = New System.Drawing.Size(425, 23)
-        Me.txtStr.TabIndex = 2
+        Me.txtStr.TabIndex = 3
         '
         'Label1
         '
@@ -118,16 +118,16 @@ Partial Class frmMain
         '
         'btnFind
         '
-        Me.btnFind.Location = New System.Drawing.Point(518, 3)
+        Me.btnFind.Location = New System.Drawing.Point(517, 29)
         Me.btnFind.Name = "btnFind"
-        Me.btnFind.Size = New System.Drawing.Size(89, 52)
-        Me.btnFind.TabIndex = 3
+        Me.btnFind.Size = New System.Drawing.Size(89, 27)
+        Me.btnFind.TabIndex = 4
         Me.btnFind.Text = "Find"
         Me.btnFind.UseVisualStyleBackColor = True
         '
         'StatusStrip1
         '
-        Me.StatusStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.pbLine, Me.pbProgress, Me.lblStatus})
+        Me.StatusStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.pbProgress, Me.lblStatus})
         Me.StatusStrip1.Location = New System.Drawing.Point(0, 585)
         Me.StatusStrip1.Name = "StatusStrip1"
         Me.StatusStrip1.Size = New System.Drawing.Size(1048, 22)
@@ -156,6 +156,7 @@ Partial Class frmMain
         '
         'SplitContainer1.Panel1
         '
+        Me.SplitContainer1.Panel1.Controls.Add(Me.cbQuick)
         Me.SplitContainer1.Panel1.Controls.Add(Me.Label1)
         Me.SplitContainer1.Panel1.Controls.Add(Me.txtDir)
         Me.SplitContainer1.Panel1.Controls.Add(Me.btnFind)
@@ -171,12 +172,15 @@ Partial Class frmMain
         Me.SplitContainer1.SplitterDistance = 609
         Me.SplitContainer1.TabIndex = 8
         '
-        'pbLine
+        'cbQuick
         '
-        Me.pbLine.Name = "pbLine"
-        Me.pbLine.Size = New System.Drawing.Size(100, 16)
-        Me.pbLine.Style = System.Windows.Forms.ProgressBarStyle.Continuous
-        Me.pbLine.ToolTipText = "Line"
+        Me.cbQuick.AutoSize = True
+        Me.cbQuick.Location = New System.Drawing.Point(518, 6)
+        Me.cbQuick.Name = "cbQuick"
+        Me.cbQuick.Size = New System.Drawing.Size(57, 19)
+        Me.cbQuick.TabIndex = 2
+        Me.cbQuick.Text = "Quick"
+        Me.cbQuick.UseVisualStyleBackColor = True
         '
         'rtbText
         '
@@ -240,5 +244,5 @@ Partial Class frmMain
     Friend WithEvents lblStatus As ToolStripStatusLabel
     Friend WithEvents SplitContainer1 As SplitContainer
     Friend WithEvents rtbText As RichTextBoxEx
-    Friend WithEvents pbLine As ToolStripProgressBar
+    Friend WithEvents cbQuick As CheckBox
 End Class

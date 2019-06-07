@@ -48,7 +48,6 @@ Public Class frmMain
                 Dim flag As Boolean = False
 
                 Dim lines As String() = IO.File.ReadAllLines(file)
-                pbLine.Maximum = lines.Length
                 For Each line As String In lines
                     lineNum += 1
 
@@ -56,16 +55,14 @@ Public Class frmMain
                         flag = True
                         matches += 1
 
-                        Dim num6 As Integer = 0
                         Dim lvi As New ListViewItem(lineNum)
                         With lvi
                             .SubItems.Add(Path.GetFileName(file))
                             .SubItems.Add(line)
                         End With
                         lvResult.Items.Add(lvi)
+                        If cbQuick.Checked Then Exit For
                     End If
-
-                    pbLine.Value = lineNum
                 Next
 
                 If flag Then
@@ -75,7 +72,7 @@ Public Class frmMain
                 End If
 
                 pbProgress.Value = curFile
-                lblStatus.Text = $"Processing {curFile} of {fileNum} files. Last file: {Path.GetFileName(file)}"
+                lblStatus.Text = $"Processing {curFile} of {fileNum} files. Last file: {Path.GetFileName(file)} ({((curFile * 100) / fileNum).ToString("N")}%)"
             Next
         Catch tae As ThreadAbortException
             Thread.ResetAbort()
@@ -101,7 +98,6 @@ Public Class frmMain
             End If
             ControlsEnabler(True)
             btnFind.Text = "Find"
-            pbLine.Value = 0
             pbProgress.Value = 0
             lblStatus.Text = "Ready"
         End Try
@@ -132,6 +128,7 @@ Public Class frmMain
         btnBrowse.Enabled = enable
         Label1.Enabled = enable
         Label2.Enabled = enable
+        cbQuick.Enabled = enable
     End Sub
 
     Private Sub lvResult_DoubleClick(sender As Object, e As EventArgs) Handles lvResult.DoubleClick

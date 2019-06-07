@@ -20,3 +20,14 @@ C:\Users\PC\Documents\GitHub\Decompiled-Scripts-Fimder\DecompiledScriptsFinder\o
 C:\Users\PC\Documents\GitHub\Decompiled-Scripts-Fimder\DecompiledScriptsFinder\obj\Release\DecompiledScriptsFinder.frmMain.resources
 C:\Users\PC\Documents\GitHub\Decompiled-Scripts-Fimder\DecompiledScriptsFinder\obj\Release\DecompiledScriptsFinder.Resources.resources
 C:\Users\PC\Documents\GitHub\Decompiled-Scripts-Fimder\DecompiledScriptsFinder\obj\Release\DecompiledScriptsFinder.vbproj.GenerateResource.Cache
+E:\Users\Bartholomew\Documents\GitHub\Decompiled-Scripts-Finder\DecompiledScriptsFinder\bin\Release\DecompiledScriptsFinder.exe.config
+E:\Users\Bartholomew\Documents\GitHub\Decompiled-Scripts-Finder\DecompiledScriptsFinder\obj\Release\DecompiledScriptsFinder.exe
+E:\Users\Bartholomew\Documents\GitHub\Decompiled-Scripts-Finder\DecompiledScriptsFinder\obj\Release\DecompiledScriptsFinder.xml
+E:\Users\Bartholomew\Documents\GitHub\Decompiled-Scripts-Finder\DecompiledScriptsFinder\obj\Release\DecompiledScriptsFinder.pdb
+E:\Users\Bartholomew\Documents\GitHub\Decompiled-Scripts-Finder\DecompiledScriptsFinder\bin\Release\DecompiledScriptsFinder.exe
+E:\Users\Bartholomew\Documents\GitHub\Decompiled-Scripts-Finder\DecompiledScriptsFinder\bin\Release\DecompiledScriptsFinder.pdb
+E:\Users\Bartholomew\Documents\GitHub\Decompiled-Scripts-Finder\DecompiledScriptsFinder\bin\Release\DecompiledScriptsFinder.xml
+E:\Users\Bartholomew\Documents\GitHub\Decompiled-Scripts-Finder\DecompiledScriptsFinder\obj\Release\DecompiledScriptsFinder.vbprojResolveAssemblyReference.cache
+E:\Users\Bartholomew\Documents\GitHub\Decompiled-Scripts-Finder\DecompiledScriptsFinder\obj\Release\DecompiledScriptsFinder.frmMain.resources
+E:\Users\Bartholomew\Documents\GitHub\Decompiled-Scripts-Finder\DecompiledScriptsFinder\obj\Release\DecompiledScriptsFinder.Resources.resources
+E:\Users\Bartholomew\Documents\GitHub\Decompiled-Scripts-Finder\DecompiledScriptsFinder\obj\Release\DecompiledScriptsFinder.vbproj.GenerateResource.Cache
