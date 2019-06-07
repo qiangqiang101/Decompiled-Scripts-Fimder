@@ -36,6 +36,7 @@ Partial Class frmMain
         Me.pbProgress = New System.Windows.Forms.ToolStripProgressBar()
         Me.lblStatus = New System.Windows.Forms.ToolStripStatusLabel()
         Me.SplitContainer1 = New System.Windows.Forms.SplitContainer()
+        Me.pbLine = New System.Windows.Forms.ToolStripProgressBar()
         Me.rtbText = New DecompiledScriptsFinder.RichTextBoxEx()
         Me.StatusStrip1.SuspendLayout()
         CType(Me.SplitContainer1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -126,7 +127,7 @@ Partial Class frmMain
         '
         'StatusStrip1
         '
-        Me.StatusStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.pbProgress, Me.lblStatus})
+        Me.StatusStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.pbLine, Me.pbProgress, Me.lblStatus})
         Me.StatusStrip1.Location = New System.Drawing.Point(0, 585)
         Me.StatusStrip1.Name = "StatusStrip1"
         Me.StatusStrip1.Size = New System.Drawing.Size(1048, 22)
@@ -138,12 +139,13 @@ Partial Class frmMain
         Me.pbProgress.Name = "pbProgress"
         Me.pbProgress.Size = New System.Drawing.Size(100, 16)
         Me.pbProgress.Style = System.Windows.Forms.ProgressBarStyle.Continuous
+        Me.pbProgress.ToolTipText = "File"
         '
         'lblStatus
         '
         Me.lblStatus.Name = "lblStatus"
-        Me.lblStatus.Size = New System.Drawing.Size(42, 17)
-        Me.lblStatus.Text = "Ready."
+        Me.lblStatus.Size = New System.Drawing.Size(39, 17)
+        Me.lblStatus.Text = "Ready"
         '
         'SplitContainer1
         '
@@ -168,6 +170,13 @@ Partial Class frmMain
         Me.SplitContainer1.Size = New System.Drawing.Size(1048, 585)
         Me.SplitContainer1.SplitterDistance = 609
         Me.SplitContainer1.TabIndex = 8
+        '
+        'pbLine
+        '
+        Me.pbLine.Name = "pbLine"
+        Me.pbLine.Size = New System.Drawing.Size(100, 16)
+        Me.pbLine.Style = System.Windows.Forms.ProgressBarStyle.Continuous
+        Me.pbLine.ToolTipText = "Line"
         '
         'rtbText
         '
@@ -231,4 +240,5 @@ Partial Class frmMain
     Friend WithEvents lblStatus As ToolStripStatusLabel
     Friend WithEvents SplitContainer1 As SplitContainer
     Friend WithEvents rtbText As RichTextBoxEx
+    Friend WithEvents pbLine As ToolStripProgressBar
 End Class

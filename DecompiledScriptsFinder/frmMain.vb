@@ -2,6 +2,7 @@
 Imports System.IO
 Imports System.Runtime.InteropServices
 Imports System.Text
+Imports System.Text.RegularExpressions
 Imports System.Threading
 
 Public Class frmMain
@@ -29,6 +30,8 @@ Public Class frmMain
         Dim abort As Boolean = False
         Dim fileNum As Integer = 0
         Dim curFile As Integer = 0, withMatch As Integer = 0, woMatch As Integer = 0, matches As Integer = 0
+        Dim startTime As DateTime = Now
+        Dim elapsedTime As TimeSpan
 
         Try
             ControlsEnabler(False)
@@ -45,6 +48,7 @@ Public Class frmMain
                 Dim flag As Boolean = False
 
                 Dim lines As String() = IO.File.ReadAllLines(file)
+                pbLine.Maximum = lines.Length
                 For Each line As String In lines
                     lineNum += 1
 
@@ -60,6 +64,8 @@ Public Class frmMain
                         End With
                         lvResult.Items.Add(lvi)
                     End If
+
+                    pbLine.Value = lineNum
                 Next
 
                 If flag Then
@@ -78,19 +84,26 @@ Public Class frmMain
             MsgBox($"{ex.Message} {ex.StackTrace}", MsgBoxStyle.Critical, "Error")
         Finally
             If Not abort Then
+                elapsedTime = Now.Subtract(startTime)
+
                 Dim sb As New StringBuilder()
                 sb.AppendLine("Files: ")
                 sb.AppendLine($"- Total: {fileNum}")
                 sb.AppendLine($"- Processed: {curFile}")
                 sb.AppendLine($"- With Matches: {withMatch}")
                 sb.AppendLine($"- Without Matches: {woMatch}")
-                sb.AppendLine(vbNewLine)
+                sb.AppendLine("")
                 sb.AppendLine($"Matches Found: {matches}")
+                sb.AppendLine("")
+                sb.AppendLine($"Elapsed Time: {elapsedTime.Days} {If(elapsedTime.Days > 1, "days", "day")} {elapsedTime.Hours} {If(elapsedTime.Hours > 1, "hours", "hour")} {elapsedTime.Minutes} {If(elapsedTime.Minutes > 1, "minutes", "minute")} {elapsedTime.Seconds} {If(elapsedTime.Seconds > 1, "seconds", "second")}")
 
-                MsgBox($"{sb.ToString()}", MsgBoxStyle.Exclamation, "Task Completed")
+                MsgBox($"{sb.ToString()}", MsgBoxStyle.Information, "Task Completed")
             End If
             ControlsEnabler(True)
             btnFind.Text = "Find"
+            pbLine.Value = 0
+            pbProgress.Value = 0
+            lblStatus.Text = "Ready"
         End Try
     End Sub
 
@@ -117,6 +130,8 @@ Public Class frmMain
         txtDir.Enabled = enable
         txtStr.Enabled = enable
         btnBrowse.Enabled = enable
+        Label1.Enabled = enable
+        Label2.Enabled = enable
     End Sub
 
     Private Sub lvResult_DoubleClick(sender As Object, e As EventArgs) Handles lvResult.DoubleClick
@@ -157,4 +172,5 @@ Public Class frmMain
             MsgBox($"{ex.Message} {ex.StackTrace}", MsgBoxStyle.Critical, "Error")
         End Try
     End Sub
+
 End Class
