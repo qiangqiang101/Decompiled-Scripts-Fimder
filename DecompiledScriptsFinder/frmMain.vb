@@ -42,38 +42,41 @@ Public Class frmMain
             fileNum = files.Length
             pbProgress.Maximum = fileNum
 
-            For Each file As String In files
+            For f As Integer = 0 To files.Count - 1
+                Dim file As String = files(f)
                 curFile += 1
                 Dim lineNum As Integer = 0
                 Dim flag As Boolean = False
 
-                Dim lines As String() = IO.File.ReadAllLines(file)
-                For Each line As String In lines
-                    lineNum += 1
+                Dim text As String = IO.File.ReadAllText(file)
+                Dim index As Integer = text.ToLower.IndexOf(txtStr.Text.ToLower)
 
-                    If line.ToLower.Contains(txtStr.Text.ToLower) Then
-                        flag = True
-                        matches += 1
+                If index >= 0 Then
+                    Dim lines As String() = IO.File.ReadAllLines(file)
+                    For l As Integer = 0 To lines.Count - 1
+                        Dim line As String = lines(l)
+                        lineNum += 1
 
-                        Dim lvi As New ListViewItem(lineNum)
-                        With lvi
-                            .SubItems.Add(Path.GetFileName(file))
-                            .SubItems.Add(line)
-                        End With
-                        lvResult.Items.Add(lvi)
-                        If cbQuick.Checked Then Exit For
-                    End If
-                Next
+                        If line.ToLower.Contains(txtStr.Text.ToLower) Then
+                            flag = True
+                            matches += 1
 
-                If flag Then
-                    withMatch += 1
-                Else
-                    woMatch += 1
+                            Dim lvi As New ListViewItem(lineNum)
+                            With lvi
+                                .SubItems.Add(Path.GetFileName(file))
+                                .SubItems.Add(line)
+                            End With
+                            lvResult.Items.Add(lvi)
+                            If cbQuick.Checked Then Exit For
+                        End If
+                    Next l
                 End If
+
+                If flag Then withMatch += 1 Else woMatch += 1
 
                 pbProgress.Value = curFile
                 lblStatus.Text = $"Processing {curFile} of {fileNum} files. Last file: {Path.GetFileName(file)} ({((curFile * 100) / fileNum).ToString("N")}%)"
-            Next
+            Next f
         Catch tae As ThreadAbortException
             Thread.ResetAbort()
             abort = True
@@ -162,7 +165,7 @@ Public Class frmMain
             rtbText.Text = IO.File.ReadAllText(file)
 
             rtbText.SelectionStart = rtbText.Find(rtbText.Lines(line), 0, RichTextBoxFinds.None)
-            rtbText.Scroll(line)
+            rtbText.ScrollToCaret()
             rtbText.SelectionBackColor = Color.LightBlue
             rtbText.Focus()
         Catch ex As Exception

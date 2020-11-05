@@ -1,0 +1,11 @@
+E:\Users\Bartholomew\Documents\GitHub\Decompiled-Scripts-Finder\DecompiledScriptsFinder\bin\x64\Debug\DecompiledScriptsFinder.exe.config
+E:\Users\Bartholomew\Documents\GitHub\Decompiled-Scripts-Finder\DecompiledScriptsFinder\bin\x64\Debug\DecompiledScriptsFinder.exe
+E:\Users\Bartholomew\Documents\GitHub\Decompiled-Scripts-Finder\DecompiledScriptsFinder\bin\x64\Debug\DecompiledScriptsFinder.pdb
+E:\Users\Bartholomew\Documents\GitHub\Decompiled-Scripts-Finder\DecompiledScriptsFinder\bin\x64\Debug\DecompiledScriptsFinder.xml
+E:\Users\Bartholomew\Documents\GitHub\Decompiled-Scripts-Finder\DecompiledScriptsFinder\obj\x64\Debug\DecompiledScriptsFinder.frmMain.resources
+E:\Users\Bartholomew\Documents\GitHub\Decompiled-Scripts-Finder\DecompiledScriptsFinder\obj\x64\Debug\DecompiledScriptsFinder.Resources.resources
+E:\Users\Bartholomew\Documents\GitHub\Decompiled-Scripts-Finder\DecompiledScriptsFinder\obj\x64\Debug\DecompiledScriptsFinder.vbproj.GenerateResource.Cache
+E:\Users\Bartholomew\Documents\GitHub\Decompiled-Scripts-Finder\DecompiledScriptsFinder\obj\x64\Debug\DecompiledScriptsFinder.exe
+E:\Users\Bartholomew\Documents\GitHub\Decompiled-Scripts-Finder\DecompiledScriptsFinder\obj\x64\Debug\DecompiledScriptsFinder.xml
+E:\Users\Bartholomew\Documents\GitHub\Decompiled-Scripts-Finder\DecompiledScriptsFinder\obj\x64\Debug\DecompiledScriptsFinder.pdb
+E:\Users\Bartholomew\Documents\GitHub\Decompiled-Scripts-Finder\DecompiledScriptsFinder\obj\x64\Debug\DecompiledScriptsFinder.vbprojResolveAssemblyReference.cache

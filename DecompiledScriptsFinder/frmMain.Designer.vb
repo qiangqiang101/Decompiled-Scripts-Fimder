@@ -37,12 +37,14 @@ Partial Class frmMain
         Me.lblStatus = New System.Windows.Forms.ToolStripStatusLabel()
         Me.SplitContainer1 = New System.Windows.Forms.SplitContainer()
         Me.cbQuick = New System.Windows.Forms.CheckBox()
-        Me.rtbText = New DecompiledScriptsFinder.RichTextBoxEx()
+        Me.rtbText = New System.Windows.Forms.RichTextBox()
+        Me.Panel1 = New System.Windows.Forms.Panel()
         Me.StatusStrip1.SuspendLayout()
         CType(Me.SplitContainer1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SplitContainer1.Panel1.SuspendLayout()
         Me.SplitContainer1.Panel2.SuspendLayout()
         Me.SplitContainer1.SuspendLayout()
+        Me.Panel1.SuspendLayout()
         Me.SuspendLayout()
         '
         'txtDir
@@ -167,7 +169,8 @@ Partial Class frmMain
         '
         'SplitContainer1.Panel2
         '
-        Me.SplitContainer1.Panel2.Controls.Add(Me.rtbText)
+        Me.SplitContainer1.Panel2.Controls.Add(Me.Panel1)
+        Me.SplitContainer1.Panel2.Padding = New System.Windows.Forms.Padding(3)
         Me.SplitContainer1.Size = New System.Drawing.Size(1048, 585)
         Me.SplitContainer1.SplitterDistance = 609
         Me.SplitContainer1.TabIndex = 8
@@ -184,25 +187,24 @@ Partial Class frmMain
         '
         'rtbText
         '
-        Me.rtbText.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.rtbText.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.rtbText.Dock = System.Windows.Forms.DockStyle.Fill
         Me.rtbText.Location = New System.Drawing.Point(0, 0)
         Me.rtbText.Name = "rtbText"
-        Me.rtbText.NumberAlignment = System.Drawing.StringAlignment.Center
-        Me.rtbText.NumberBackground1 = System.Drawing.SystemColors.ControlLight
-        Me.rtbText.NumberBackground2 = System.Drawing.SystemColors.Window
-        Me.rtbText.NumberBorder = System.Drawing.SystemColors.ControlDark
-        Me.rtbText.NumberBorderThickness = 1.0!
-        Me.rtbText.NumberColor = System.Drawing.Color.DarkGray
-        Me.rtbText.NumberFont = New System.Drawing.Font("Consolas", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.rtbText.NumberLeadingZeroes = False
-        Me.rtbText.NumberLineCounting = DecompiledScriptsFinder.RichTextBoxEx.LineCounting.CRLF
-        Me.rtbText.NumberPadding = 2
         Me.rtbText.ReadOnly = True
-        Me.rtbText.ShowLineNumbers = True
-        Me.rtbText.Size = New System.Drawing.Size(435, 585)
+        Me.rtbText.Size = New System.Drawing.Size(427, 577)
         Me.rtbText.TabIndex = 0
         Me.rtbText.Text = ""
+        '
+        'Panel1
+        '
+        Me.Panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.Panel1.Controls.Add(Me.rtbText)
+        Me.Panel1.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.Panel1.Location = New System.Drawing.Point(3, 3)
+        Me.Panel1.Name = "Panel1"
+        Me.Panel1.Size = New System.Drawing.Size(429, 579)
+        Me.Panel1.TabIndex = 1
         '
         'frmMain
         '
@@ -224,6 +226,7 @@ Partial Class frmMain
         Me.SplitContainer1.Panel2.ResumeLayout(False)
         CType(Me.SplitContainer1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.SplitContainer1.ResumeLayout(False)
+        Me.Panel1.ResumeLayout(False)
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -243,6 +246,7 @@ Partial Class frmMain
     Friend WithEvents pbProgress As ToolStripProgressBar
     Friend WithEvents lblStatus As ToolStripStatusLabel
     Friend WithEvents SplitContainer1 As SplitContainer
-    Friend WithEvents rtbText As RichTextBoxEx
     Friend WithEvents cbQuick As CheckBox
+    Friend WithEvents rtbText As RichTextBox
+    Friend WithEvents Panel1 As Panel
 End Class
